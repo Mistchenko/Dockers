@@ -10,8 +10,7 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-ENTRYPOINT ["/usr/sbin/init"]
-#CMD ["/usr/sbin/init"]
+CMD ["/usr/sbin/init"]
 
 #VOLUME [ "/sys/fs/cgroup" ]
 
@@ -23,4 +22,11 @@ RUN pip install --upgrade pip
 
 RUN yum -y install mc
 
+
+ENV APP_DIR=/var/app/
+
+RUN mkdir -p $APP_DIR
+WORKDIR $APP_DIR
+
+ADD ./app $APP_DIR/
 
