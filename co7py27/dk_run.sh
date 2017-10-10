@@ -6,4 +6,6 @@
 
 #docker run --rm --name CO7 -v /home/mist/Dockers/co7py27/app/:/var/app -it co7py27 sh
 
-docker run --rm --name CO7 -v $(pwd)/app/:/var/app -it co7py27 sh
+#docker run --privileged --rm --name CO7 -v $(pwd)/app/:/var/app -it co7py27 sh
+
+docker run --privileged --rm --name CO7 -v $(pwd)/app/:/var/app -d co7py27

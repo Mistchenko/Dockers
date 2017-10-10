@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile-web
+      args:
+        APP_DIR_CONT: ${APP_DIR_CONT}
+        REQUIREMENTS_DIR: ${REQUIREMENTS_DIR}
+    ports:
+     - "8000:8000"
+    volumes:
+     - ${APP_DIR_HOST}:${APP_DIR_CONT}
