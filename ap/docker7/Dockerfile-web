@@ -12,20 +12,23 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 
 CMD ["/usr/sbin/init"]
 
-RUN yum -y install epel-release
-RUN yum -y update
-RUN yum -y install python-pip
+#RUN yum -y install epel-release
+#RUN yum -y update
+#RUN yum -y install python-pip
 
-RUN yum -y clean all
+#RUN yum -y clean all
 
 ARG APP_DIR_CONT
-ARG REQUIREMENTS_DIR
+ARG REQ_DIR_HOST
+ARG REQ_DIR_CONT=../requirements/
 
 RUN mkdir -p $APP_DIR_CONT
 WORKDIR $APP_DIR_CONT
 
-ADD $REQUIREMENTS ../
- 
+RUN mkdir -p $REQ_DIR_CONT
 
-RUN pip install --upgrade pip
+COPY ../ws/requirements/base.txt /var/ap/requirements/
+
+
+#RUN pip install --upgrade pip
 #RUN pip install -r ../requirements/base.txt

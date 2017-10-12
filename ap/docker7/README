@@ -9,7 +9,7 @@ $ docker-compose up -d
 
 	-d 			Detached mode: Run containers in the background, print new container names.
 
-$ docker-compose up -build
+$ docker-compose up --build
 
 	--build		Build images before starting containers.
 

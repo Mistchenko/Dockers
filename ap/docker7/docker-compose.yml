@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile-web
       args:
         APP_DIR_CONT: ${APP_DIR_CONT}
-        REQUIREMENTS_DIR: ${REQUIREMENTS_DIR}
+        REQ_DIR_HOST: ${REQUIREMENTS_DIR_HOST}
     ports:
      - "8000:8000"
     volumes:
