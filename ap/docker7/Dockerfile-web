@@ -21,4 +21,4 @@ ARG APP_DIR_CONT
 RUN mkdir -p $APP_DIR_CONT
 WORKDIR $APP_DIR_CONT
 
-CMD python manage.py runserver 0.0.0.0:8000
+# CMD python manage.py runserver 0.0.0.0:8000

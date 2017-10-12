@@ -11,8 +11,13 @@ yum -y install python-pip
 # yum -y install libffi-devel
 # yum -y install openldap-devel
 
+yum -y install rsyslog
+
 yum -y clean all
 
 pip install -U pip
 pip install -r /var/ap/requirements/pip_base.txt
+
+systemctl enable rsyslog
+
 yum -y install mc
