@@ -21,6 +21,9 @@ $ docker-compose down
 *************************
 Service web		
 *************************
+$ docker-compose exec web ./runserver.sh
+
+		Run django server (docker container "web" must be "up")
 
 $ docker-compose exec web sh
 

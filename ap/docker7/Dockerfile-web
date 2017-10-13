@@ -13,6 +13,10 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 CMD ["/usr/sbin/init"]
 
 
+RUN mkdir -p /var/log/ap/dev/
+#ADD requirements/rsyslog.conf /etc/rsyslog.conf
+ADD requirements/rsyslog_ap.conf /etc/rsyslog.d/rsyslog_ap.conf
+
 RUN mkdir -p /var/ap/requirements
 ADD requirements/* /var/ap/requirements/
 RUN /var/ap/requirements/yum_install.sh
