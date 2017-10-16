@@ -1,0 +1,17 @@
+-r base7.txt
+pytest-django==2.9.1
+pytest-capturelog==0.7
+pytest-cov==2.4.0
+factory-boy==2.5.2
+fabric==1.11.1
+git+git://github.com/openstack-dev/hacking.git@0.12.0
+git+git://github.com/eLRuLL/pytest-random-order.git
+flake8==2.5.4
+jsonschema==2.5.1
+mccabe==0.3.1
+mock==2.0.0
+openpyxl==2.3.5
+xlrd==1.0.0
+flake8-putty==0.4.0
+cython==0.23
+pandas

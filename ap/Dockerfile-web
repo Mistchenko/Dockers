@@ -14,15 +14,14 @@ CMD ["/usr/sbin/init"]
 
 
 RUN mkdir -p /var/log/ap/dev/
-ADD requirements/rsyslog.conf /etc/rsyslog.conf
-#ADD requirements/rsyslog_ap.conf /etc/rsyslog.d/rsyslog_ap.conf
+ADD docker7/rsyslog.conf /etc/rsyslog.conf
 
-RUN mkdir -p /var/ap/requirements
-ADD requirements/* /var/ap/requirements/
-RUN /var/ap/requirements/yum_install.sh
+ARG INSTALL_DIR=/var/ap/install
+RUN mkdir -p $INSTALL_DIR/
+ADD ws/requirements/* $INSTALL_DIR/
+ADD docker7/yum_install.sh $INSTALL_DIR
+RUN $INSTALL_DIR/yum_install.sh
 
-ARG APP_DIR_CONT
-RUN mkdir -p $APP_DIR_CONT
-WORKDIR $APP_DIR_CONT
-
-# CMD python manage.py runserver 0.0.0.0:8000
+ARG APP_DIR=/var/ap/ws
+RUN mkdir -p $APP_DIR
+WORKDIR $APP_DIR
