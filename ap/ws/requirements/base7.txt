@@ -11,7 +11,7 @@ xlsxwriter==0.8.9
 xmltodict==0.10.2
 ujson==1.35
 django-mail-templated==0.2.2
-cryptography==0.9.3
+cryptography
 csvschema==1.1.1
 djangosaml2==0.13.0
 git+https://builder:BuilderPassword1@stash.t3worldwide.com/scm/cmn/apdb.git
