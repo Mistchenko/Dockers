@@ -1,6 +1,9 @@
 *************************
 Starting work
+
+Open dir [ ap ]
 Warning! All commands run in the current folder
+
 *************************
 
 	Builds, (re)creates, starts, and attaches to containers for a service.
@@ -28,3 +31,4 @@ $ docker-compose exec web ./runserver.sh
 $ docker-compose exec web sh
 
 		Open shell in web container 
+

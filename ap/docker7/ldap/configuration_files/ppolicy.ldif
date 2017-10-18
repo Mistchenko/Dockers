@@ -1,0 +1,26 @@
+dn: ou=pwpolicies,dc=ldap,dc=t3worldwide,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: pwpolicies
+
+dn: cn=default,ou=pwpolicies,dc=ldap,dc=t3worldwide,dc=com
+cn: default
+objectClass: pwdPolicy
+objectClass: person
+objectClass: top
+pwdAttribute: userPassword
+sn: Standard Policy
+pwdMaxFailure: 5
+pwdFailureCountInterval: 0
+pwdInHistory: 0
+pwdLockoutDuration: 0
+pwdMinLength: 8
+pwdCheckQuality: 0
+pwdLockout: TRUE
+pwdAllowUserChange: TRUE
+pwdExpireWarning: 0
+pwdMaxAge: 7776000
+pwdGraceAuthNLimit: 0
+pwdMinAge: 0
+pwdSafeModify: FALSE
+pwdMustChange: TRUE

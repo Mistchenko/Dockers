@@ -1,0 +1,7 @@
+dn: cn=ap,cn=schema,cn=config
+objectClass: olcSchemaConfig
+cn: ap
+olcAttributeTypes: {0}( 1.3.6.1.4.1.5000.1.1.3 NAME 'keyAES' DESC 'Crypto key in AES for Audit Point' SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {1}( 1.3.6.1.4.1.5000.1.1.4 NAME 'autologinKey' DESC 'Autologin key for Audit Point' SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcAttributeTypes: {2}( 1.3.6.1.4.1.5000.1.1.5 NAME 'aptRegCode' DESC 'aptRegCode key for Audit Point' SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+olcObjectClasses: {0}( 1.3.6.1.4.1.5000.1.1.3 NAME 'AuditPoint' SUP top AUXILIARY MAY ( keyAES $ autologinKey $ aptRegCode) )

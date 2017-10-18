@@ -1,0 +1,372 @@
+dn: ou=T3,dc=ldap,dc=t3worldwide,dc=com
+objectClass: top
+objectClass: organizationalUnit
+objectClass: AuditPoint
+keyAES: BkTYFgIhJehO+Fx538JyTeEGGy63HTV0mfPektNCYRo=
+ou: T3
+description: T3 WorldWide
+autologinKey: qxn1o^f7h-!<CyP]vJCM494T3pD8o6~~
+
+dn: ou=BCBSNC,dc=ldap,dc=t3worldwide,dc=com
+objectClass: top
+objectClass: organizationalUnit
+ou: BCBSNC
+description: BCBSNC users
+
+dn: ou=HBCBSNJ,dc=ldap,dc=t3worldwide,dc=com
+objectClass: top
+objectClass: organizationalUnit
+objectClass: AuditPoint
+keyAES: SEJDQlNOSjRUM1dPUkxEV0lERUxMQw==
+ou: HBCBSNJ
+
+dn: ou=CAMBIA,dc=ldap,dc=t3worldwide,dc=com
+objectClass: top
+objectClass: organizationalUnit
+objectClass: AuditPoint
+keyAES: SEJDQlNOSjRUM1dPUkxEV0lERUxMQw==
+ou: CAMBIA
+description: Cambia Regence Users
+
+dn: uid=uadmin,dc=ldap,dc=t3worldwide,dc=com
+cn: uadmin
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 1274
+pwdLockout: TRUE
+uid: uadmin
+userPassword: {SSHA}8G+zF/yL/RPViQrFg2PvEnu0S0r/dlqC
+pwdAllowUserChange: TRUE
+mail: uadmin@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMinLength: 8
+pwdMaxAge: 0
+gidNumber: 65534
+employeeNumber: 1111
+homeDirectory: /home/uadmin
+telephoneNumber: 55555
+displayName: Administrator
+pwdAttribute: userPassword
+pwdLockoutDuration: 600
+sn: uadmin
+pwdMustChange: TRUE
+
+
+dn: uid=cauditor_ipp,dc=ldap,dc=t3worldwide,dc=com
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+gidNumber: 0
+sn: Auditor
+homeDirectory: /home/cauditor
+loginShell: / bin/bash
+uidNumber: 44853
+pwdAttribute: 2.5.4.35
+pwdAllowUserChange: TRUE
+pwdInHistory: 1
+cn: Customer Auditor
+pwdMaxFailure: 5
+pwdMinLength: 8
+audio: 3
+pwdMaxAge: 345600
+pwdLockout: TRUE
+uid: cauditor_ipp
+pwdMustChange: TRUE
+pwdLockoutDuration: 0
+displayName: Customer User IPP
+givenName: Customer
+autologinKey: TRUE
+mail: cauditor_ipp@t3worldwide.com
+employeeNumber: 1234
+userPassword: {SSHA}DxS2uMROVmTRzFeOzUGL70iCGLSTcf1b
+
+dn: uid=cauditor_qt,ou=BCBSNC,dc=ldap,dc=t3worldwide,dc=com
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+cn: Customer Auditor Quality Team
+uidNumber: 44853
+pwdLockout: TRUE
+uid: cauditor_qt
+userPassword: {SSHA}FOU7Uey4RHOA9VEsUIGckdZzRBFARU1k
+pwdAllowUserChange: TRUE
+mail: cauditor_qt@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMinLength: 8
+pwdMaxAge: 0
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: 12346
+homeDirectory: /home/cauditor_qt
+telephoneNumber: 11111111111111111111111111111111111111111111111111
+displayName: Quality Team User
+pwdAttribute: userPassword
+pwdLockoutDuration: 0
+sn: Auditor
+pwdMustChange: TRUE
+givenName: Customer
+aptRegCode: EdIIEg
+
+dn: uid=cauditor_com,dc=ldap,dc=t3worldwide,dc=com
+cn: Customer Auditor
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 44853
+pwdLockout: TRUE
+uid: cauditor_com
+userPassword: {SSHA}24A68CbiY0tijsW2zM2Jme7TJG/An22q
+pwdAllowUserChange: TRUE
+mail: cauditor_com@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMinLength: 8
+pwdMaxAge: 0
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: 0000
+homeDirectory: /home/cauditor
+displayName: Commercial Claims User
+pwdAttribute: userPassword
+pwdLockoutDuration: 0
+sn: Auditor Com
+pwdMustChange: TRUE
+givenName: Customer
+
+dn: uid=cauditor_state,dc=ldap,dc=t3worldwide,dc=com
+uid: cauditor_state
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 44853
+pwdLockout: TRUE
+aptRegCode: 8n5TZK
+cn: Customer Auditor
+userPassword: {SSHA}waR+S8x7ceEBOrCCZr6kqBSX2YDAoe5M
+pwdAllowUserChange: TRUE
+mail: cauditor_state@t3worldwide.com
+pwdMaxFailure: 5
+pwdMustChange: TRUE
+loginShell: /bin/bash
+pwdMinLength: 8
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: ####
+homeDirectory: /home/cauditor
+telephoneNumber: (123) 456-7890
+displayName: State Claims User
+pwdAttribute: userPassword
+pwdLockoutDuration: 600
+sn: Auditor
+pwdMaxAge: 7776000
+givenName: Customer
+
+dn: uid=uauditor,ou=T3,dc=ldap,dc=t3worldwide,dc=com
+pwdMinLength: 8
+pwdMaxFailure: 5
+uid: uauditor
+pwdMustChange: TRUE
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+loginShell: /bin/bash
+userPassword: {SSHA}KK3pEGJ3GYupwQgs5mOInUm7JRmPGDul
+pwdMaxAge: 7776000
+uidNumber: 20546
+pwdLockoutDuration: 600
+employeeNumber: 1234
+pwdAttribute: userPassword
+gidNumber: 65534
+pwdAllowUserChange: TRUE
+sn: uauditor
+homeDirectory: /home/uauditor
+mail: uauditor@t3worldwide.com
+displayName: Test Auditor
+pwdLockout: TRUE
+cn: uauditor
+
+dn: uid=cauditor_bcbsnc,ou=BCBSNC,dc=ldap,dc=t3worldwide,dc=com
+cn: Customer Auditor
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 44853
+pwdLockout: TRUE
+uid: cauditor_bcbsnc
+userPassword: {SSHA}Ktm1z74TF+qQFjO4TtQIivt4K/t5uLbc
+pwdAllowUserChange: TRUE
+mail: cauditor_bcbsnc@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: bin/bash
+pwdMinLength: 8
+pwdMaxAge: 0
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: 1234
+homeDirectory: /home/cauditor
+displayName: Commercial Claims User
+pwdAttribute: userPassword
+pwdLockoutDuration: 0
+sn: Auditor Com
+pwdMustChange: TRUE
+givenName: Customer
+
+dn: uid=csuper_state,ou=BCBSNC,dc=ldap,dc=t3worldwide,dc=com
+cn: Customer Supervisor State
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 5435
+pwdLockout: TRUE
+uid: csuper_state
+userPassword: {SSHA}bFI+hYRg1gpKpEuHbZyYzbYiNpe0WYmM
+pwdAllowUserChange: TRUE
+mail: csuper_state@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMinLength: 8
+pwdMaxAge: 7776000
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: 12345
+homeDirectory: /home/csuper_state
+displayName: Customer Supervisor State
+pwdAttribute: userPassword
+pwdLockoutDuration: 0
+sn: Supervisor
+pwdMustChange: TRUE
+givenName: Customer
+
+dn: uid=csuper_com,dc=ldap,dc=t3worldwide,dc=com
+cn: Customer Supervisor Commercial
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 5435
+pwdLockout: TRUE
+uid: csuper_com
+userPassword: {SSHA}eifU7kDOxMGt0mpBcrha6xJUgoojT8Rs
+pwdAllowUserChange: TRUE
+mail: csuper_com@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMinLength: 8
+pwdMaxAge: 0
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: abcd
+homeDirectory: /home/csuper_com
+displayName: Customer Supervisor Commercial
+pwdAttribute: userPassword
+pwdLockoutDuration: 0
+sn: Supervisor
+pwdMustChange: TRUE
+givenName: Customer
+
+dn: uid=csuper_qt,dc=ldap,dc=t3worldwide,dc=com
+cn: Customer Supervisor Quality Team
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 5435
+pwdLockout: TRUE
+uid: csuper_qt
+userPassword: {SSHA}fm2wpCyCJQ48SCFqQkRT1SoL1j9RsXfM
+pwdAllowUserChange: TRUE
+mail: csuper_qt@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMinLength: 8
+pwdMaxAge: 0
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: 1234
+homeDirectory: /home/csuper_qt
+telephoneNumber: 24-24-241
+displayName: Quality Team Supervisor
+pwdAttribute: userPassword
+pwdLockoutDuration: 0
+sn: Supervisor
+pwdMustChange: TRUE
+givenName: Customer
+
+dn: uid=cauditor_ipp_state,dc=ldap,dc=t3worldwide,dc=com
+cn: Auditor State
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 5435
+pwdLockout: TRUE
+uid: cauditor_ipp_state
+userPassword: {SSHA}DxS2uMROVmTRzFeOzUGL70iCGLSTcf1b
+pwdAllowUserChange: TRUE
+mail: cauditor_ipp_state@t3worldwide.com
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMinLength: 8
+pwdMaxAge: 0
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: 1234
+homeDirectory: /home/cauditor_ipp_state
+telephoneNumber: 24-24-2411
+displayName: Customer User State
+pwdAttribute: userPassword
+pwdLockoutDuration: 0
+sn: Supervisor
+pwdMustChange: TRUE
+givenName: Customer
+
+dn: uid=cauditor_mr_state,dc=ldap,dc=t3worldwide,dc=com
+uid: cauditor_mr_state
+objectClass: posixAccount
+objectClass: top
+objectClass: inetOrgPerson
+objectClass: pwdPolicy
+objectClass: AuditPoint
+uidNumber: 44853
+pwdLockout: TRUE
+aptRegCode: vu5DG3
+cn: Customer Auditor MR State
+userPassword: {SSHA}t9Gf5wMcwqDuT4crq8p2WWLbYkHBgeu4
+pwdAllowUserChange: TRUE
+mail: cauditor_mr_state@t3worldwide.com
+pwdMinLength: 8
+pwdMaxFailure: 5
+loginShell: /bin/bash
+pwdMustChange: TRUE
+pwdMaxAge: 7776000
+gidNumber: 65534
+pwdInHistory: 1
+employeeNumber: 1234
+displayName: Medical Review State User
+pwdAttribute: userPassword
+pwdLockoutDuration: 600
+sn: Auditor
+homeDirectory: /home/cauditor_mr_state
+givenName: Customer

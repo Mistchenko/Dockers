@@ -9,3 +9,29 @@ services:
      - "8000:8000"
     volumes:
      - ./ws:/var/ap/ws
+    depends_on:
+      - db
+    links:
+      - db:db
+      - ldap:ldap
+
+  db:
+    image: mysql:5.6
+    env_file: ./docker7/db/mysql.env
+    volumes:
+      - mysqldata:/var/lib/mysql
+      - ./docker7/db/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+    ports:
+      - "3306:3306"
+
+  ldap:
+    image: dinkel/openldap
+    env_file: ./docker7/ldap/ldap.env
+    ports:
+      - "389:389"
+
+
+
+volumes:
+  mysqldata:
+    external: true

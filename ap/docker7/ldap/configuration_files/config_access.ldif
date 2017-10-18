@@ -1,0 +1,20 @@
+# Set up permissions
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+replace: olcAccess
+olcAccess: {0}to attrs=userPassword,shadowLastChange,displayName,mail,telephoneNumber,employeeNumber
+        by dn="cn=admin,dc=ldap,dc=t3worldwide,dc=com" write
+        by set="[cn=T3_ADMIN,dc=ldap,dc=t3worldwide,dc=com]/memberUid & user/uid" write
+        by set="[cn=T3_SUPER,dc=ldap,dc=t3worldwide,dc=com]/memberUid & user/uid" write
+        by anonymous auth
+        by self write
+        by * none
+olcAccess: {1}to filter=(|(objectClass=pwdPolicy)(objectClass=posixGroup)(objectClass=groupOfUniqueNames))
+        by set="[cn=T3_ADMIN,dc=ldap,dc=t3worldwide,dc=com]/memberUid & user/uid" write
+        by anonymous none
+        by users read
+olcAccess: {2}to *
+        by set="[cn=T3_ADMIN,dc=ldap,dc=t3worldwide,dc=com]/memberUid & user/uid" write
+        by dn="cn=admin,dc=ldap,dc=t3worldwide,dc=com" write
+        by anonymous none
+        by users read

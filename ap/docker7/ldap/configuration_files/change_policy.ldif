@@ -1,0 +1,9 @@
+dn: olcOverlay={0}ppolicy,olcDatabase={1}hdb,cn=config
+changetype: modify
+replace: olcPPolicyHashCleartext
+olcPPolicyHashCleartext: TRUE
+
+dn: olcOverlay={0}ppolicy,olcDatabase={1}hdb,cn=config
+changetype: modify
+replace: olcPPolicyUseLockout
+olcPPolicyUseLockout: TRUE
