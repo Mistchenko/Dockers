@@ -1,0 +1,10 @@
+version: '3'
+services:
+  py3:
+    build:
+      context: .
+      dockerfile: ./Dockerfile-py3
+    privileged: true
+    volumes:
+     - ./app:/var/app
+     - ./install:/var/install
