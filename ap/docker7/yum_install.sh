@@ -28,11 +28,14 @@ echo '▄■▀■▄■▀■▄■▀■▄☼ pIp InStAlL ☼▀■▄■▀�
 echo ''
 echo ''
 
-# pip install -r /var/ap/install/pip_base.txt
 pip install -r /var/ap/install/dev7.txt
 # pip install -r /var/ap/install/base7.txt
 
 systemctl enable rsyslog
+
+echo '#' > /var/log/ap/dev/ws.log
+echo '#' > /var/log/ap/dev/ping.log
+echo '#' > /var/log/ap/dev/saml.log
 
 #yum -y install mc
 
