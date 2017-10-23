@@ -8,66 +8,39 @@ yum -y install python-pip
 #yum -y install mariadb101u-devel
 yum -y install gcc
 yum -y install python-devel
-yum -y install mariadb-devel
-yum -y install libxslt-devel
-yum -y install libffi-devel
-yum -y install openldap-devel
+# yum -y install mariadb-devel
+# yum -y install libxslt-devel
+# yum -y install libffi-devel
+# yum -y install openldap-devel
 
-yum -y install rsyslog
+# yum -y install rsyslog
 
-yum -y install git
-yum -y install numpy
+# yum -y install git
+# yum -y install numpy
 
+yum -y install mc
 yum -y clean all
 
 pip install -U pip
 
-echo ''
-echo ''
-echo '▄■▀■▄■▀■▄■▀■▄☼ pIp InStAlL ☼▀■▄■▀■▄■▀■▄■▀'
-echo ''
-echo ''
+echo '
 
-pip install -r /var/ap/install/dev7.txt
-# pip install -r /var/ap/install/base7.txt
+		▄■▀■▄■▀■▄■▀■▄☼ pIp InStAlL ☼▀■▄■▀■▄■▀■▄■▀
 
-systemctl enable rsyslog
+'
 
-echo '#' > /var/log/ap/dev/ws.log
-echo '#' > /var/log/ap/dev/ping.log
-echo '#' > /var/log/ap/dev/saml.log
+# pip install -r /var/ap/install/dev7.txt
+pip install -r /var/ap/install/pip_base.txt
 
-#yum -y install mc
+# systemctl enable rsyslog
+
+# echo '#' > /var/log/ap/dev/ws.log
+# echo '#' > /var/log/ap/dev/ping.log
+# echo '#' > /var/log/ap/dev/saml.log
+
 
 echo '
 
-__________________________$$$$___$$$$
-____________________$$$____$$$___$$$_$$$$
-____________$$$____$$$$_____$$$$$$$$$$$$$$
-____$$$$____$$$$___$$$$$_____$$$$$$$$$$
-____$$$$____$$$$_$$$$_________$$$$$$$$$
-_____$$$$___$$$__$$____________$$$$$$$$
-______$$$$___$$_________________$$$$$$
-$$$$____$$_______________________$$$$$
-$$$$$$$_______$$$$$$$$$___________$$$$$
-__$$$$___$$$$$$$$$$$$$$$$$$___$$___$$$$$
-______$$$$$$___________$$$$$$$$$$$__$$$$$
-_____$$$__________$$$_____$$$$__$$$__$$$$$
-___$$$_______$$___$$$$$____$$$$$$$___$$$$$
-__$$$_______$$$$___$$$$_____$$$$$____$$$$$
-__$$$_______$$$$$____$__$____$$$_____$$$$$
-__$$$_________$$$______$$____$$$____$$$$$
-$$$$$_____$$$_________$$$___$$$___$$$$$$
-$$$$$$_____$$$$$$$$$$$$$___$$$___$$$$$$
-$__$$$$______$$$$$$$$$$__$$$$__$$$$$$$
-$$$$$$$$$$_____________$$$$___$$$$$$$
-_$$$$__$$$$$$$$$$$$$$$$$$$__$$$$$$$$
-_____________$$$$$$$$$$$$__$$$$$$$$
-_____________________$$$$$$$$$$$$$$
-________________$$$$$$$$$$$$$$$$$$$
-____________$$$$$$$$$$$$$$$____$$$$$
-_________$$$$$$$$$$$$$$_________$$$$$
-________$$$$$$$$$$$______________$$$$$
-_______$$$$$$$$____$$$$$$_________$$$$$
+		▄■▀■▄■▀■▄■▀■▄☼ InStAlLaTiOn CoMpLeTe ☼▀■▄■▀■▄■▀■▄■▀
 
 '
