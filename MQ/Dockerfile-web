@@ -13,13 +13,10 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 CMD ["/usr/sbin/init"]
 
 
-RUN mkdir -p /var/log/ap/dev/
-ADD docker7/rsyslog.conf /etc/rsyslog.conf
-
 ARG INSTALL_DIR=/var/ap/install
 RUN mkdir -p $INSTALL_DIR/
-ADD ws/requirements/* $INSTALL_DIR/
-ADD docker7/yum_install.sh $INSTALL_DIR
+ADD pip_install.txt $INSTALL_DIR/
+ADD yum_install.sh $INSTALL_DIR
 RUN $INSTALL_DIR/yum_install.sh
 
 ARG APP_DIR=/var/ap/ws
