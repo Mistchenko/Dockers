@@ -4,9 +4,11 @@ import tasks
 
 def index(request):
     #tsk=tasks.task_test()
-    tsk = tasks.gen_prime(10000)
+    #tsk = tasks.gen_prime(10000)
+    # mes = 'App: %s' % tsk
 
-    mes = 'App: %s' % tsk
+    tasks.gen_prime(10000)
+    mes = 'App: ignore_result'
 
     return HttpResponse(mes)
 

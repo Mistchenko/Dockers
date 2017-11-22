@@ -8,7 +8,7 @@ def task_test():
     return 'task test'
 
 
-@shared_task
+@shared_task(ignore_result=True)
 def gen_prime(x):
     multiples = []
     results = []
@@ -17,4 +17,4 @@ def gen_prime(x):
             results.append(i)
             for j in xrange(i*i, x+1, i):
                 multiples.append(j)
-    return results
+    # return results
