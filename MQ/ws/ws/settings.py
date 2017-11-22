@@ -19,7 +19,7 @@ INSTALLED_APPS = (
     # 'django.contrib.sessions',
     # 'django.contrib.messages',
     # 'django.contrib.staticfiles',
-    'app',
+    'home',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,3 +50,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+CELERY_BROKER_URL = 'amqp://localhost'
