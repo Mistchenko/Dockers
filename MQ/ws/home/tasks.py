@@ -1,14 +1,17 @@
 from celery import shared_task
 import time
 
+from ws.celery_mq import apl
 
-@shared_task
+#@shared_task
+@apl.task
 def task_test():
     time.sleep(30)
     return 'task test'
 
 
-@shared_task(ignore_result=True)
+#@shared_task(ignore_result=True)
+@apl.task(ignore_result=True)
 def gen_prime(x):
     multiples = []
     results = []
