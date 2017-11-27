@@ -36,8 +36,8 @@ WSGI_APPLICATION = 'ws.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -50,4 +50,14 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CELERY_BROKER_URL = 'amqp://localhost'
+# CELERY_BROKER_URL = 'amqp://localhost'
+# CELERY_BROKER_URL = 'amqp://celery:ZJW46aE9rzkl@192.168.100.51:5672/test'
+# CELERY_DEFAULT_QUEUE = 'test_celery'
+
+
+BROKER_URL = 'amqp://celery:ZJW46aE9rzkl@192.168.100.51:5672/test'
+
+CELERY_DEFAULT_QUEUE = 'test_celery'
+CELERY_DEFAULT_EXCHANGE = 'test_exchange'
+#CELERY_DEFAULT_EXCHANGE_TYPE = 'direct'
+CELERY_DEFAULT_ROUTING_KEY = 'test_celery'

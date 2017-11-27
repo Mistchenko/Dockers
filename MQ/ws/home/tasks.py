@@ -10,8 +10,8 @@ def task_test():
     return 'task test'
 
 
-#@shared_task(ignore_result=True)
-@apl.task(ignore_result=True)
+#@apl.task(ignore_result=True)
+@shared_task(ignore_result=True)
 def gen_prime(x):
     multiples = []
     results = []
