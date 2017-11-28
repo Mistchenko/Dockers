@@ -1,3 +1,4 @@
-from celery_mq import apl as celery_app
+from __future__ import absolute_import
 
-__all__ = ['celery_app']
+
+from .celery import app

@@ -1,4 +1,6 @@
 import os
+from kombu import Exchange, Queue
+
 # from logging.handlers import SysLogHandler
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -59,5 +61,10 @@ BROKER_URL = 'amqp://celery:ZJW46aE9rzkl@192.168.100.51:5672/test'
 
 CELERY_DEFAULT_QUEUE = 'test_celery'
 CELERY_DEFAULT_EXCHANGE = 'test_exchange'
-#CELERY_DEFAULT_EXCHANGE_TYPE = 'direct'
+CELERY_DEFAULT_EXCHANGE_TYPE = 'direct'
 CELERY_DEFAULT_ROUTING_KEY = 'test_celery'
+CELERY_ACCEPT_CONTENT = ['json']
+
+CELERY_QUEUES = (
+    Queue('test_celery', exchange=Exchange('test_celery', type='direct'), routing_key='test_celery'),
+)
