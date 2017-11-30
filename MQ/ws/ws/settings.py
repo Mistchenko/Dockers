@@ -52,19 +52,19 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-# CELERY_BROKER_URL = 'amqp://localhost'
-# CELERY_BROKER_URL = 'amqp://celery:ZJW46aE9rzkl@192.168.100.51:5672/test'
-# CELERY_DEFAULT_QUEUE = 'test_celery'
+MQ_LOCALHOST = True
 
+if MQ_LOCALHOST:
+    CELERY_BROKER_URL = 'amqp://localhost'
+else:
+    BROKER_URL = 'amqp://celery:ZJW46aE9rzkl@192.168.100.51:5672/test'
 
-BROKER_URL = 'amqp://celery:ZJW46aE9rzkl@192.168.100.51:5672/test'
+    CELERY_DEFAULT_QUEUE = 'test_celery'
+    CELERY_DEFAULT_EXCHANGE = 'test_exchange'
+    CELERY_DEFAULT_EXCHANGE_TYPE = 'direct'
+    CELERY_DEFAULT_ROUTING_KEY = 'test_celery'
+    CELERY_ACCEPT_CONTENT = ['json']
 
-CELERY_DEFAULT_QUEUE = 'test_celery'
-CELERY_DEFAULT_EXCHANGE = 'test_exchange'
-CELERY_DEFAULT_EXCHANGE_TYPE = 'direct'
-CELERY_DEFAULT_ROUTING_KEY = 'test_celery'
-CELERY_ACCEPT_CONTENT = ['json']
-
-CELERY_QUEUES = (
-    Queue('test_celery', exchange=Exchange('test_celery', type='direct'), routing_key='test_celery'),
-)
+    CELERY_QUEUES = (
+        Queue('test_celery', exchange=Exchange('test_celery', type='direct'), routing_key='test_celery'),
+    )

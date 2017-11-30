@@ -3,13 +3,11 @@ from django.http import HttpResponse
 import tasks
 
 def index(request):
-    #tsk=tasks.task_test.delay()
-    #tsk = tasks.gen_prime(10000)
-    # mes = 'App: %s' % tsk
+    tasks.sleep_test.delay()  # sleep 30c
 
-    tasks.gen_prime.delay(2000)
+    #tasks.gen_prime.delay(2000)
+
     mes = 'App: ignore_result'
-
     return HttpResponse(mes)
 
 

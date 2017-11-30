@@ -1,16 +1,14 @@
 from __future__ import absolute_import, unicode_literals
-#from celery import shared_task
 import time
 from ws.celery import app
 
-#@shared_task
+
 @app.task
-def task_test():
-    time.sleep(10)
-    return 'task test'
+def sleep_test():
+    time.sleep(30)
+    return 'sleep test'
 
 
-#@shared_task(ignore_result=True)
 @app.task
 def gen_prime(x):
     multiples = []
